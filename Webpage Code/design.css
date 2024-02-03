@@ -1,0 +1,12 @@
+#home {
+    visibility: visible;
+}
+#recipes {
+    visibility: hidden;
+}
+#add {
+    visibility: hidden;
+}
+#up {
+    min-width:210px;
+}

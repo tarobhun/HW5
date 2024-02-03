@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Little CookBook</title>
     <script src="jquery-3.7.1.min.js"></script>
@@ -14,10 +14,10 @@
             <h2>Let's Start Cooking!</h2> </div>
             <div data-role="navbar" data-theme="d">
                 <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#add">Add New Recipe</a></li>
+                <li><button type="button" class="currentr">View Your Recipes</button></li>
+                <li><button type="button" class="newr">Add New Recipe</button></li>
                 </ul></div>
-                </div>
+                
 
 
             <div data-role="content" data-theme="b"></div>
@@ -37,19 +37,15 @@
             <h2>Recipes</h2>
             <div data-role="navbar" data-theme="d">
                 <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#add">Add New Recipe</a></li>
+                <li><button type="button" class="mainpage">Home</button></li>
+                <li><button type="button" class="newr">Add New Recipe</button></li>
                 </ul></div>
                 </div>
 
 
             <div data-role="content" data-theme="b">
-                <ul>
-                    <li><a href="#1">Chicken and Veggies Bake</a><img src="images/imagename1.jpg" alt="picture of dish"></li>
-                    <li><a href="#2">Mikaeyla's Famous Mushroom Chili</a><img src="images/imagename2.jpg" alt="picture of dish"></li>
-                    <li><a href="#3">Pasta with Mushroom Meat Sauce</a><img src="images/imagename3.jpg" alt="picture of dish"></li>
-                    <li><a href="#4">Taco Salad</a><img src="images/imagename4.jpg" alt="picture of dish"></li>
-                </ul>
+                <p id="textbox">
+                </p>
             </div>
 
 
@@ -69,21 +65,20 @@
             </div>
             <div data-role="navbar" data-theme="d">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#add">Add New Recipe</a></li>
+                <li><button type="button" class="mainpage">Home</button></li>
+                <li><button type="button" class="currentr">Add New Recipe</button></li>
                 </ul></div>
-            </div>
 
 
             <div data-role="content" data-theme="b">
-                Recipe Name <br  />
-                    <input type="text" value="" id="name" /><br  />
-                Enter Recipe <br  />
-                    <input type="text" value="" id="recipe" /><br  />
+                <label for="name">Recipe Name</label> <br  />
+                    <input type="text" title="Recipe Name" id="name" /><br  />
+                <label for="recipe">Write Recipe Here</label> <br  />
+                    <input type="text" title="Write Recipe Here" id="recipe" /><br  />
 
 
                 <label for="select-cuisine">Select Cuisine Type</label>
-                <select name="select-cuisine" id="select-cuisine">
+                <select name="cuisine" id="select-cuisine">
                     <option value="1">Mexican</option>
                     <option value="2">American</option>
                     <option value="3">Italian</option>
@@ -96,7 +91,7 @@
                     <option value="10">German</option>
                 </select>
                 <label for="select-meal">Select Meal Type</label>
-                <select name="select-meal" id="select-meal">
+                <select name="meal" id="select-meal">
                     <option value="breakfast">Breakfast</option>
                     <option value="lunch">Lunch</option>
                     <option value="dinner">Dinner</option>
@@ -110,10 +105,9 @@
                 <br>
 
 
-                <a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-
-                btn-icon-left ui-btn-a">Navigate</a>
+                <a href="#popupMenu" data-rel="popup" data-transition="slideup" class="pop">Navigate</a>
                 <div data-role="popup" id="popupMenu" data-theme="b">
-                <ul data-role="listview" data-inset="true" style="min-width:210px;">
+                <ul data-role="listview" data-inset="true" id="up">
                     <li data-role="list-divider">Choose an action</li>
                     <li><a href="#home" data-transition="flow" >Home</a></li>
                     <li><a href="#recipes" data-transition="fade" >Recipes</a></li>
