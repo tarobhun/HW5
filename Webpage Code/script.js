@@ -4,14 +4,17 @@ $(document).ready(function(){
         $("#home").css("visibility", "hidden");
         $("#add").css("visibility", "hidden");
         $("#recipes").css("visibility", "visible");
-        $("#textbox").append(recipes);
+        for(i = 0; i < recipes.length; i++) {
+            let current = recipes[i];
+            $("#textbox").append(current.name, "<br/>", current.cuisine, "<br/>", current.meal, "<br/>", current.recipe);
+        }
     });
     $(".newr").click(function() {
         $("#home").css("visibility", "hidden");
         $("#add").css("visibility", "visible");
         $("#recipes").css("visibility", "hidden");
         $("#buttonAdd").click(function(){
-            let current = {name: $(".name").val(), cuisine: $(".select-cuisine").val(), meal: $(".select-meal").val(), recipe: $(".recipe").val()};
+            let current = {name: $("#name").val(), cuisine: $("#select-cuisine").val(), meal: $("#select-meal").val(), recipe: $("#recipe").val()};
             recipes.push(current);
         });
     });
