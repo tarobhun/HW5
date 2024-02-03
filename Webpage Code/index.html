@@ -1,13 +1,122 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little CookBook</title>
     <script src="jquery-3.7.1.min.js"></script>
 </head>
 <body>
+<!-- =====================================PAGE: HOME==========================================
+=========================================================================================== -->
+    <div data-role="page" id="home">
+            <div data-role="header" data-theme="c">
+            <h2>Let's Start Cooking!</h2> </div>
+            <div data-role="navbar" data-theme="d">
+                <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#add">Add New Recipe</a></li>
+                </ul></div>
+                </div>
 
 
+            <div data-role="content" data-theme="b"></div>
+            <img src="images/imagename.jpg" alt="picture of cooking utensil or kitchen appliance">
+
+
+            <div data-role="footer" data-theme="a">
+                <h3>Heidi Hun and Mikaeyla Coldiron 2024</h3>
+            </div>
+    </div>
+
+
+<!-- =================================PAGE: RECIPES LIST=====================================
+=========================================================================================== -->
+    <div data-role="page" id="recipes">
+            <div data-role="header" data-theme="c">
+            <h2>Recipes</h2>
+            <div data-role="navbar" data-theme="d">
+                <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#add">Add New Recipe</a></li>
+                </ul></div>
+                </div>
+
+
+            <div data-role="content" data-theme="b">
+                <img src="images/imagename2.jpg" alt="picture of dish">
+            </div>
+
+
+            <div data-role="footer" data-theme="a">
+                <h3>Heidi Hun and Mikaeyla Coldiron 2024</h3>
+            </div>
+    </div>
+
+
+    <!-- =============================PAGE: ADD NEW RECIPE====================================
+=========================================================================================== -->
+    <div data-role="page" id="add">
+            <div data-role="header" data-theme="c">
+                <h2>Add New Recipe</h2>
+            </div>
+            <div data-role="navbar" data-theme="d">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#add">Add New Recipe</a></li>
+                </ul></div>
+            </div>
+
+
+            <div data-role="content" data-theme="b">
+                Recipe Name <br  />
+                    <input type="text" value="" id="name" /><br  />
+                Enter Recipe <br  />
+                    <input type="text" value="" id="recipe" /><br  />
+
+
+                <label for="select-cuisine">Select Cuisine Type</label>
+                <select name="select-cuisine" id="select-cuisine">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <label for="select-meal">Select Meal Type</label>
+                <select name="select-meal" id="select-meal">
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                    <option value="dessert">Dessert</option>
+
+
+                </select>
+
+
+                <button id="buttonAdd">Add This Recipe</button>
+                <br>
+
+
+                <a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-
+                btn-icon-left ui-btn-a">Navigate</a>
+                <div data-role="popup" id="popupMenu" data-theme="b">
+                <ul data-role="listview" data-inset="true" style="min-width:210px;">
+                    <li data-role="list-divider">Choose an action</li>
+                    <li><a href="#home" data-transition="flow" >Home</a></li>
+                    <li><a href="#recipes" data-transition="fade" >Recipes</a></li>
+                </ul>
+                </div>
+            </div>
+
+
+            <div data-role="footer" data-theme="a">
+                <h3>Heidi Hun and Mikaeyla Coldiron 2024</h3>
+            </div>
+    </div>
+    <!-- =============================END===========================================
+=========================================================================================== -->
 
 
     <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="design.css">
 </body>
 </html>
