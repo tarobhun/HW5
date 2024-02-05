@@ -39,11 +39,7 @@ $(document).ready(function(){
         // Display each recipe
         for(let i = 0; i < recipes.length; i++) {
             let current = recipes[i];
-            $("#textbox").append("<p><strong>Recipe Name: </strong> " + current.name + "</p>");
-            $("#textbox").append("<p><strong>Cuisine Type: </strong> " + current.cuisine + "</p>");
-            $("#textbox").append("<p><strong>Meal Type: </strong> " + current.meal + "</p>");
-            $("#textbox").append("<p><strong>Recipe: </strong> " + current.recipe + "</p>");
-            $("#textbox").append("<hr>"); // Add a horizontal line for separation
+            $("#textbox").append(current.name, "<br/>", current.cuisine, "<br/>", current.meal, "<br/>", current.recipe);
         }
     });
 
