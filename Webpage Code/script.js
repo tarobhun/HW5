@@ -6,7 +6,12 @@ $(document).ready(function(){
         $("#recipes").css("visibility", "visible");
         for(i = 0; i < recipes.length; i++) {
             let current = recipes[i];
-            $("#textbox").append(current.name, "<br/>", current.cuisine, "<br/>", current.meal, "<br/>", current.recipe);
+            if (i === 0) {
+                $("#textbox").append(current.name, "<br/>", current.cuisine, "<br/>", current.meal, "<br/>", current.recipe);
+            }
+            else {
+                $("#textbox").append("<br/>", current.name, "<br/>", current.cuisine, "<br/>", current.meal, "<br/>", current.recipe);
+            }
         }
     });
     $(".newr").click(function() {
